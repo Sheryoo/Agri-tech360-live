@@ -1,9 +1,9 @@
-from models.user import create_connection, get_user_by_email
+from models.user import create_connection
 
 
 def create_history_table(conn):
-    '''Function to create history table in the database if not exists'''
-    query = '''
+    """Function to create history table in the database if not exists"""
+    query = """
     CREATE TABLE IF NOT EXISTS history (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user TEXT NOT NULL,
@@ -11,7 +11,7 @@ def create_history_table(conn):
         response TEXT NOT NULL,
         FOREIGN KEY (user) REFERENCES users(email)
     )
-    '''
+    """
     try:
         cursor = conn.cursor()
         cursor.execute(query)
@@ -23,18 +23,20 @@ def create_history_table(conn):
 
 
 def add_history(user, message, response):
-    '''Function to add history to database'''
+    """Function to add history to database"""
     conn = create_connection()
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO history (user, message, response) VALUES (?, ?, ?)",
-                   (user, message, response))
+    cursor.execute(
+        "INSERT INTO history (user, message, response) VALUES (?, ?, ?)",
+        (user, message, response),
+    )
     conn.commit()
     cursor.close()
     conn.close()
 
 
 def get_user_history(user):
-    '''Function to get user's history'''
+    """Function to get user's history"""
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM history WHERE user =?", (user,))
@@ -42,10 +44,7 @@ def get_user_history(user):
     result = []
     if data:
         for i in range(len(data)):
-            result.append({
-                "message": data[i][2],
-                "response": data[i][3]
-            })
+            result.append({"message": data[i][2], "response": data[i][3]})
         cursor.close()
         conn.close()
         return result

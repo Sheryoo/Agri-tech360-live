@@ -16,16 +16,14 @@ soils = {
         "bush beans": {"season": "summer", "successor": {"winter": "greens"}},
         "cantaloupe": {"season": "summer", "successor": {"winter": "cover crops"}},
         "herbs": {"season": "summer", "successor": {"winter": "herbs"}},
-
-
         "fava beans": {"season": "winter", "successor": {"summer": "corn"}},
         "lettuce": {"season": "winter", "successor": {"summer": "tomatoes"}},
         "spinach": {"season": "winter", "successor": {"summer": "peppers"}},
         "barley": {"season": "winter", "successor": {"summer": "fallow"}},
         "pulses": {"season": "winter", "successor": {"summer": "oilseeds"}},
         "wheat": {"season": "winter", "successor": {"summer": "corn"}},
-        "lettuce": {"season": "winter", "successor": {"summer": "vegetables"}},
-        "spinach": {"season": "winter", "successor": {"summer": "herbs"}},
+        "lettuce": {"season": "winter", "successor": {"summer": "vegetables"}},  # noqa: F601
+        "spinach": {"season": "winter", "successor": {"summer": "herbs"}},  # noqa: F601
         "arugula": {"season": "winter", "successor": {"summer": "leafy greens"}},
         "radishes": {"season": "winter", "successor": {"summer": "cruciferous"}},
         "carrots": {"season": "winter", "successor": {"summer": "herbs"}},
@@ -51,8 +49,6 @@ soils = {
         "pumpkins": {"season": "summer", "successor": {"winter": "cover crops"}},
         "millet": {"season": "summer", "successor": {"winter": "cover crops"}},
         "kenaf": {"season": "summer", "successor": {"winter": "cover crops"}},
-
-
         "oilseeds": {"season": "winter", "successor": {"summer": "vegetables"}},
         "wheat": {"season": "winter", "successor": {"summer": "pulses"}},
         "lentils": {"season": "winter", "successor": {"summer": "corn"}},
@@ -61,7 +57,7 @@ soils = {
         "field peas": {"season": "winter", "successor": {"summer": "solanums"}},
         "winter wheat": {"season": "winter", "successor": {"summer": "fallow"}},
         "barley": {"season": "winter", "successor": {"summer": "fallow"}},
-        "chickpeas": {"season": "winter", "successor": {"summer": "vegetables"}},
+        "chickpeas": {"season": "winter", "successor": {"summer": "vegetables"}},  # noqa: F601
         "faba beans": {"season": "winter", "successor": {"summer": "corn"}},
         "winter radishes": {"season": "winter", "successor": {"summer": "greens"}},
         "turnips": {"season": "winter", "successor": {"summer": "greens"}},
@@ -83,16 +79,17 @@ soils = {
         "sunflowers": {"season": "summer", "successor": {"winter": "cover crops"}},
         "watermelons": {"season": "summer", "successor": {"winter": "cover crops"}},
         "cantaloupe": {"season": "summer", "successor": {"winter": "cover crops"}},
-        "pumpkins": {"season": "summer", "successor": {"winter": "cover crops"}},
+        "pumpkins": {"season": "summer", "successor": {"winter": "cover crops"}},  # noqa: F601
         "winter squash": {"season": "summer", "successor": {"winter": "cover crops"}},
-
-
         "oat grass": {"season": "winter", "successor": {"summer": "corn"}},
         "cabbage": {"season": "winter", "successor": {"summer": "potatoes"}},
         "kale": {"season": "winter", "successor": {"summer": "vegetables"}},
         "swiss chard": {"season": "winter", "successor": {"summer": "leafy greens"}},
         "leeks": {"season": "winter", "successor": {"summer": "solanums"}},
-        "brussels sprouts": {"season": "winter", "successor": {"summer": "cruciferous"}},
+        "brussels sprouts": {
+            "season": "winter",
+            "successor": {"summer": "cruciferous"},
+        },
         "collard greens": {"season": "winter", "successor": {"summer": "vegetables"}},
         "turnips": {"season": "winter", "successor": {"summer": "leafy greens"}},
         "radishes": {"season": "winter", "successor": {"summer": "leafy greens"}},
@@ -108,16 +105,14 @@ soils = {
         "okra": {"season": "summer", "successor": {"winter": "garlic"}},
         "tomatoes": {"season": "summer", "successor": {"winter": "fallow"}},
         "eggplant": {"season": "summer", "successor": {"winter": "fallow"}},
-        "peanuts": {"season": "summer", "successor": {"winter": "cover crops"}},
+        "peanuts": {"season": "summer", "successor": {"winter": "cover crops"}},  # noqa: F601
         "black-eyed peas": {"season": "summer", "successor": {"winter": "cover crops"}},
         "chickpeas": {"season": "summer", "successor": {"winter": "cereals"}},
         "sesame seeds": {"season": "summer", "successor": {"winter": "cover crops"}},
         "sunn hemp": {"season": "summer", "successor": {"winter": "cover crops"}},
         "cantaloupe": {"season": "summer", "successor": {"winter": "cover crops"}},
-        "watermelons": {"season": "summer", "successor": {"winter": "cover crops"}},
+        "watermelons": {"season": "summer", "successor": {"winter": "cover crops"}},  # noqa: F601
         "hot peppers": {"season": "summer", "successor": {"winter": "cover crops"}},
-
-
         "potatoes": {"season": "winter", "successor": {"summer": "peanuts"}},
         "garlic": {"season": "winter", "successor": {"summer": "peppers"}},
         "onions": {"season": "winter", "successor": {"summer": "peppers"}},
@@ -130,7 +125,7 @@ soils = {
         "radishes": {"season": "winter", "successor": {"summer": "cruciferous"}},
         "carrots": {"season": "winter", "successor": {"summer": "herbs"}},
         "beets": {"season": "winter", "successor": {"summer": "leafy greens"}},
-    }
+    },
 }
 
 
