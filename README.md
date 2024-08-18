@@ -6,7 +6,7 @@ Python 3.8–3.11
 
 ## Installation
 
-First, clone this repository.
+First, clone this repository!
 
     $ git clone https://github.com/Sheryoo/Agri-tech360.git
     $ cd Agri-tech360
@@ -21,7 +21,7 @@ Then, add your .env file with this data:
     $ PLANT_API_KEY = ....
     $ GEMINI_API_KEY = ....
 
-Then, Create venv and activate it:
+Then, create Venv and activate it:
 
 ### For Windows:
 
@@ -41,9 +41,9 @@ After, install all necessary to run:
 
 ### For Mac or Linux:
 
-    $ pip3 install -r requirements.txt
+    $ pip3 install -r requirementsW.txt
 
-Than, run the application:
+Then, run the application:
 
 ### For Windows:
 
@@ -53,6 +53,6 @@ Than, run the application:
 
     $ python3 app.py
 
-To see your application, access this url in your browser:
+To see your application, access this URL in your browser:
 
     http://{HOST}:{PORT}
