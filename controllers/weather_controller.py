@@ -17,9 +17,9 @@ def get_weather(email):
             return jsonify(
                 {"status": False, "message": "City not provided!", "data": None}
             ), 400
-        url = f"http://api.weatherapi.com/v1/forecast.json?key={api_key}&q={city}&days=7&aqi=no&alerts=no"
+        url = f"https://api.weatherapi.com/v1/forecast.json?key={api_key}&q={city}&days=7&aqi=no&alerts=no"
 
-        response = requests.get(url)
+        response = requests.get(url, timeout=1)
         if response.status_code != 200:
             return jsonify(
                 {

@@ -53,7 +53,6 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 # Create the Database Tables before running the app
 conn = create_connection()
 create_user_table(conn)

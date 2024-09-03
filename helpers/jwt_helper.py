@@ -13,7 +13,7 @@ def generate_jwt(email, app):
     expiry_date = datetime.datetime.now() + datetime.timedelta(days=30)
     token = jwt.encode(
         {"email": email, "exp": expiry_date},
-        app.config["SECRET_KEY"],
+        os.getenv("SECRET_KEY"),
         algorithm="HS256",
     )
     return token
