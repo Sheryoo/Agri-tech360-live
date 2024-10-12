@@ -18,7 +18,8 @@ def get_season():
 
 def classify_soil(file):
     class_names = ["Alluvial soil", "Black Soil", "Clay soil", "Red soil"]
-    model = tf.keras.models.load_model("./models/AI_Models/soil_model.h5")
+    model = tf.keras.models.load_model("./models/AI_Models/soil_model.h5", compile=False)
+    model.compile(loss=model.loss, optimizer="adam", metrics=['accuracy'])
     img = Image.open(file)
     img = img.resize((256, 256))
     img_array = tf.keras.preprocessing.image.img_to_array(img)

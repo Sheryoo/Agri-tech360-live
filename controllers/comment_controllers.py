@@ -6,7 +6,8 @@ import tensorflow as tf
 
 
 def classify_comment(comment):
-    model = tf.keras.models.load_model("./models/AI_Models/sentiment.h5")
+    model = tf.keras.models.load_model("./models/AI_Models/sentiment.h5", compile=False)
+    model.compile(loss=model.loss, optimizer="adam", metrics=['accuracy'])
     tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=5000)
     tokenizer.fit_on_texts([comment])
     tw = tokenizer.texts_to_sequences([comment])
