@@ -1,0 +1,10 @@
+env
+*.db
+__pycache__
+public
+.idea
+.DS_Store
+LICENSE
+requirementsW.txt
+stackhawk.yml
+README.md

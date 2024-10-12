@@ -196,6 +196,6 @@ def chatBot_api(email):
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 if __name__ == "__main__":
     print(
-        f"\n\n\n\033[92m \033[1mProject Docs : http://{os.getenv('HOST') or '127.0.0.1'}:{os.getenv('PORT') or 3000}/swagger \033[0m"
+        f"\n\n\n\033[92m \033[1mProject Docs : http://{os.getenv('HOST') or 'localhost'}:{os.getenv('PORT') or 8000}/swagger \033[0m"
     )
     app.run(host=os.getenv("HOST") or "localhost", port=os.getenv("PORT") or 8000)
