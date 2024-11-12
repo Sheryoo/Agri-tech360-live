@@ -2,7 +2,7 @@ absl-py==2.1.0
 annotated-types==0.6.0
 astunparse==1.6.3
 bcrypt==4.1.2
-blinker==1.8.2
+blinker==1.9.0
 cachetools==5.3.2
 certifi==2024.7.4
 charset-normalizer==3.3.2
