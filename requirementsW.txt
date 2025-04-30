@@ -24,7 +24,7 @@ h5py==3.10.0
 idna==3.7
 itsdangerous==2.2.0
 Jinja2==3.1.5
-keras==3.6.0
+keras==3.9.2
 libclang==16.0.6
 Markdown==3.7
 MarkupSafe==2.1.5
